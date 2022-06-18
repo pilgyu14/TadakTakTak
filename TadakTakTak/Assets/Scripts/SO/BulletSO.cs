@@ -13,8 +13,6 @@ public class BulletSO : ScriptableObject
     [Range(0,10)]public float BombRadius; // 폭발 반경  
     private float lifeTime = 2f; 
 
-    public Sprite bulletSprite; 
-
     public GameObject impactObstacleEffect; // 장애물에 부딪혔을때 이펙트
     public GameObject impactEnemyEffect; // 장애물에 부딪혔을때 이펙트
 

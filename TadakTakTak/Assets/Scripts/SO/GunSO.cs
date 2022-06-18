@@ -24,7 +24,5 @@ public class GunSO : ScriptableObject
     public AudioClip outOfAmmoClip;
     public AudioClip reloadClip;
 
-    public Sprite sprite;
-
     
 }

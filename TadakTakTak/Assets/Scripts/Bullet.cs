@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
     public BulletSO bulletSO;
     private Rigidbody _rigid;
 
-    private void Start()
+    private void Awake()
     {
         _rigid = GetComponent<Rigidbody>(); 
     
@@ -18,6 +18,12 @@ public class Bullet : MonoBehaviour
     }
     public void Shotted()
     {
-        _rigid.AddForce(transform.forward * bulletSO.bulletSpeed,ForceMode.Force);
+        if (_rigid == null)
+        {
+            _rigid = GetComponent<Rigidbody>();
+        }
+        _rigid.AddForce(transform.forward * bulletSO.bulletSpeed);
+        
     }
+
 }
