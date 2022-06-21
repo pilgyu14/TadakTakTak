@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System; 
 public enum GunPosType
 { 
     Head,
-    Neck,
+    LNeck,
+    RNeck,
     Body,
     LShoulder,
     RShoulder,
@@ -15,10 +16,10 @@ public enum GunPosType
     RLeg,
 }
 
-public class GunComponent : MonoBehaviour
+[Serializable]
+public class GunComponent 
 {
-    [SerializeField]
-    private Transform[] _gunPos; 
+    public Transform[] _gunPosList; 
 
 
 }

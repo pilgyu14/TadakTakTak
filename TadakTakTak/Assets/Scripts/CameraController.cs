@@ -70,7 +70,7 @@ public class CameraController : MonoBehaviour
 
         rotationY = Mathf.Clamp(rotationY + y * mouseSpeed, -45, 90);
 
-        transform.rotation = Quaternion.Euler(-rotationY, targetTransform.rotation.y, 0);
+        transform.rotation = Quaternion.Euler(-rotationY, targetTransform.eulerAngles.y, 0);
         transform.position = playerTransform.position;
     }
     private void TPS()
